@@ -6,10 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 git branch: 'main', credentialsId: '686c1ffb-3acf-425a-867a-89050e5608a8', url: 'https://github.com/gustavo07/project_robot_framework'                       
-                 // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
-           sh "ls -lart ./*" 
-           // List all branches in your repo. 
-           sh "git branch -a"
+                sh "git branch -a"
                 }
         }
         stage('Test') {
